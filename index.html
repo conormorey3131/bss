@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Business Setup Solutions (Dubai)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
+      width: 100%;
+      overflow-x: hidden;
       font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-                   Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
+
     .background {
       background-image: url('./office.jpg');
       background-size: cover;
@@ -24,54 +32,286 @@
       height: 100%;
       z-index: -1;
     }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em 2em;
+      background-color: rgba(0, 0, 0, 0.7);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding-right: 1rem;
+    }
+
+    .logo {
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.3em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5em;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1em;
+      transition: opacity 0.2s;
+    }
+
+    .nav-links a:hover {
+      opacity: 0.8;
+    }
+
+    .language-select,
+    .mobile-nav select {
+      background-color: #fff;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      padding: 0.5em 1em;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+      appearance: none;
+      background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+      background-repeat: no-repeat;
+      background-position: right 0.75em center;
+      background-size: 1em;
+      padding-right: 2.5em;
+    }
+
+    .language-select:hover,
+    .mobile-nav select:hover {
+      background-color: #f0f0f0;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      z-index: 1101;
+    }
+
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background: #fff;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .menu-toggle.open span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.open span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      justify-content: flex-start;
+      background-color: rgba(0, 0, 0, 0.95);
+      position: fixed;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      height: calc(100% - 60px);
+      padding: 2em 1.5em;
+      z-index: 1100;
+      transition: all 0.3s ease;
+    }
+
+    .mobile-nav.show {
+      display: flex;
+    }
+
+    .mobile-nav a,
+    .mobile-nav select {
+      margin: 0.75em 0;
+      color: #fff;
+    }
+
     .content {
       position: relative;
       z-index: 1;
-      height: 100%;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
       color: #fff;
+      padding: 100px 1em 2em;
     }
+
     h1 {
-      font-size: 4em;
-      margin: 0;
+      font-size: 3em;
+      margin: 0.2em 0;
     }
+
+    .subtitle {
+      font-size: 1.5em;
+      margin-bottom: 1em;
+    }
+
+    .btn {
+      padding: 0.75em 1.5em;
+      font-size: 1em;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
     footer {
-      position: absolute;
-      bottom: 20px;
       text-align: center;
       width: 100%;
       color: #fff;
       font-size: 0.9em;
+      padding: 1em 0;
+      position: relative;
+      z-index: 2;
     }
+
     footer a {
       color: #fff;
       text-decoration: none;
     }
+
     footer a:hover {
       text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      h1 {
+        font-size: 2em;
+      }
+
+      .subtitle {
+        font-size: 1.2em;
+      }
     }
   </style>
 </head>
 <body>
   <div class="background"></div>
-  <div class="content">
-    <h1>Business Setup Solutions</h1>
-    <footer>
-      <p>&copy; 2025 <a href="https://moreydigital.ie" target="_blank" rel="noopener noreferrer">Morey Digital</a>. All Rights Reserved.</p>
-    </footer>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="logo">BizSetup</div>
+
+    <div class="menu-toggle" onclick="toggleMobileMenu(this)">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#contact">Contact Us</a>
+      <select id="languageSwitcher" class="language-select" onchange="switchLanguage(this.value)">
+        <option value="en">EN</option>
+        <option value="ru">RU</option>
+        <option value="fr">FR</option>
+        <option value="de">DE</option>
+      </select>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAV -->
+  <div id="mobileNav" class="mobile-nav">
+    <a href="#services">Services</a>
+    <a href="#contact">Contact Us</a>
+    <select id="mobileLanguageSwitcher" onchange="switchLanguage(this.value)">
+      <option value="en">EN</option>
+      <option value="ru">RU</option>
+      <option value="fr">FR</option>
+      <option value="de">DE</option>
+    </select>
   </div>
 
+  <!-- MAIN CONTENT -->
+  <div class="content">
+    <h1 id="headline">Business Setup Solutions</h1>
+    <p class="subtitle" id="subtext">Business setup consultants in Dubai, UAE</p>
+    <button class="btn" id="contactBtn">Contact Us</button>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 <a href="https://moreydigital.ie" target="_blank" rel="noopener noreferrer">Morey Digital</a>. All Rights Reserved.</p>
+  </footer>
+
+  <!-- SCRIPT -->
   <script>
-    function toggleMenu() {
-      var navLinks = document.getElementById('nav-links');
-      var menuIcon = document.querySelector('.menu-icon');
-      navLinks.classList.toggle('show');
-      var isExpanded = navLinks.classList.contains('show');
-      menuIcon.setAttribute('aria-expanded', isExpanded);
+    function toggleMobileMenu(btn) {
+      btn.classList.toggle("open");
+      document.getElementById("mobileNav").classList.toggle("show");
+    }
+
+    const translations = {
+      ru: {
+        headline: "Решения для открытия бизнеса",
+        subtext: "Консультанты по открытию бизнеса в Дубае, ОАЭ",
+        contact: "Связаться с нами"
+      },
+      fr: {
+        headline: "Solutions de création d'entreprise",
+        subtext: "Consultants en création d'entreprise à Dubaï, Émirats arabes unis",
+        contact: "Contactez-nous"
+      },
+      de: {
+        headline: "Lösungen zur Unternehmensgründung",
+        subtext: "Berater für Unternehmensgründung in Dubai, VAE",
+        contact: "Kontaktieren Sie uns"
+      },
+      en: {
+        headline: "Business Setup Solutions",
+        subtext: "Business setup consultants in Dubai, UAE",
+        contact: "Contact Us"
+      }
+    };
+
+    function switchLanguage(lang) {
+      const t = translations[lang];
+      document.getElementById("headline").textContent = t.headline;
+      document.getElementById("subtext").textContent = t.subtext;
+      document.getElementById("contactBtn").textContent = t.contact;
+      document.getElementById("languageSwitcher").value = lang;
+      document.getElementById("mobileLanguageSwitcher").value = lang;
     }
   </script>
 </body>
