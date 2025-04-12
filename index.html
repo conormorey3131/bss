@@ -1,318 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Business Setup Solutions (Dubai)</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      width: 100%;
-      overflow-x: hidden;
-      font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-        Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
-
-    .background {
-      background-image: url('./office.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      filter: brightness(0.8);
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1em 2em;
-      background-color: rgba(0, 0, 0, 0.7);
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      padding-right: 1rem;
-    }
-
-    .logo {
-      color: #fff;
-      font-weight: bold;
-      font-size: 1.3em;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 1.5em;
-      align-items: center;
-    }
-
-    .nav-links a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 1em;
-      transition: opacity 0.2s;
-    }
-
-    .nav-links a:hover {
-      opacity: 0.8;
-    }
-
-    .language-select,
-    .mobile-nav select {
-      background-color: #fff;
-      color: #000;
-      border: none;
-      border-radius: 5px;
-      padding: 0.5em 1em;
-      font-size: 1em;
-      cursor: pointer;
-      transition: background-color 0.2s ease;
-      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
-      appearance: none;
-      background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
-      background-repeat: no-repeat;
-      background-position: right 0.75em center;
-      background-size: 1em;
-      padding-right: 2.5em;
-    }
-
-    .language-select:hover,
-    .mobile-nav select:hover {
-      background-color: #f0f0f0;
-    }
-
-    .menu-toggle {
-      display: none;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 5px;
-      width: 30px;
-      height: 30px;
-      cursor: pointer;
-      z-index: 1101;
-    }
-
-    .menu-toggle span {
-      width: 25px;
-      height: 3px;
-      background: #fff;
-      border-radius: 2px;
-      transition: all 0.3s ease;
-    }
-
-    .menu-toggle.open span:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .menu-toggle.open span:nth-child(2) {
-      opacity: 0;
-    }
-
-    .menu-toggle.open span:nth-child(3) {
-      transform: rotate(-45deg) translate(5px, -5px);
-    }
-
-    .mobile-nav {
-      display: none;
-      flex-direction: column;
-      justify-content: flex-start;
-      background-color: rgba(0, 0, 0, 0.95);
-      position: fixed;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      height: calc(100% - 60px);
-      padding: 2em 1.5em;
-      z-index: 1100;
-      transition: all 0.3s ease;
-    }
-
-    .mobile-nav.show {
-      display: flex;
-    }
-
-    .mobile-nav a,
-    .mobile-nav select {
-      margin: 0.75em 0;
-      color: #fff;
-    }
-
-    .content {
-      position: relative;
-      z-index: 1;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #fff;
-      padding: 100px 1em 2em;
-    }
-
-    h1 {
-      font-size: 3em;
-      margin: 0.2em 0;
-    }
-
-    .subtitle {
-      font-size: 1.5em;
-      margin-bottom: 1em;
-    }
-
-    .btn {
-      padding: 0.75em 1.5em;
-      font-size: 1em;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .btn:hover {
-      background-color: #0056b3;
-    }
-
-    footer {
-      text-align: center;
-      width: 100%;
-      color: #fff;
-      font-size: 0.9em;
-      padding: 1em 0;
-      position: relative;
-      z-index: 2;
-    }
-
-    footer a {
-      color: #fff;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
-
-      .menu-toggle {
-        display: flex;
-      }
-
-      h1 {
-        font-size: 2em;
-      }
-
-      .subtitle {
-        font-size: 1.2em;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Setup Solutions Dubai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="background"></div>
+    <header>
+        <div class="logo-container">
+            <img src="new logo.jpg" alt="Business Setup Solutions Dubai Logo">
+            <h1>Business Setup Solutions Dubai</h1>
+        </div>
+        <div class="language-selector">
+            <span>Select Language:</span>
+            <div class="language-buttons">
+                <button type="button" class="lang-btn" data-lang="en">English</button>
+                <button type="button" class="lang-btn" data-lang="ru">Russian</button>
+                <button type="button" class="lang-btn" data-lang="fr">French</button>
+            </div>
+        </div>
+    </header>
 
-  <!-- NAVIGATION -->
-  <nav>
-    <div class="logo">BizSetup</div>
+    <main>
+        <section id="banner">
+            <h2 data-translate-key="Business Setup in Dubai, Company Formation in UAE">Business Setup in Dubai, Company Formation in UAE</h2>
+            <p data-translate-key="Starting from 5,500 AED | Registration 1 day | Guaranteed bank account">Starting from 5,500 AED | Registration 1 day | Guaranteed bank account</p>
+            <a data-translate-key="Get a Free Consultation" href="#contact">Get a Free Consultation</a>
+        </section>
 
-    <div class="menu-toggle" onclick="toggleMobileMenu(this)">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+        <section id="video-presentation">
+            <h3 data-translate-key="Watch Our Presentation">Watch Our Presentation</h3>
+            <div class="video-container">
+                <video id="presentation-video" controls width="100%">
+                    <source src="532693626218070186-e.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
 
-    <div class="nav-links">
-      <a href="#services">Services</a>
-      <a href="#contact">Contact Us</a>
-      <select id="languageSwitcher" class="language-select" onchange="switchLanguage(this.value)">
-        <option value="en">EN</option>
-        <option value="ru">RU</option>
-        <option value="fr">FR</option>
-        <option value="de">DE</option>
-      </select>
-    </div>
-  </nav>
+        <section id="services">
+            <h3 data-translate-key="Our Services">Our Services</h3>
+            <ul>
+                <li data-translate-key="Company Formation">Company Formation</li>
+                <li data-translate-key="Free Zone Setup">Free Zone Setup</li>
+                <li data-translate-key="Mainland Company Setup">Mainland Company Setup</li>
+                <li data-translate-key="Offshore Company Setup">Offshore Company Setup</li>
+                <li data-translate-key="Visa Services">Visa Services</li>
+                <li data-translate-key="Bank Account Opening">Bank Account Opening</li>
+            </ul>
+            <a data-translate-key="Learn More" href="#contact">Learn More</a>
+        </section>
 
-  <!-- MOBILE NAV -->
-  <div id="mobileNav" class="mobile-nav">
-    <a href="#services">Services</a>
-    <a href="#contact">Contact Us</a>
-    <select id="mobileLanguageSwitcher" onchange="switchLanguage(this.value)">
-      <option value="en">EN</option>
-      <option value="ru">RU</option>
-      <option value="fr">FR</option>
-      <option value="de">DE</option>
-    </select>
-  </div>
+         <section id="contact">
+            <h3 data-translate-key="Get a Free Consultation">Get a Free Consultation</h3>
+            <p data-translate-key="Fill out the form to contact an expert">Fill out the form to contact an expert</p>
+            <form>
+                <input type="text" name="name" placeholder="Your Name" data-translate-key="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" data-translate-key="Your Email" required>
+                <input type="tel" name="phone" placeholder="Your Phone Number" data-translate-key="Your Phone Number" required>
+                <textarea name="message" placeholder="Your Message" data-translate-key="Your Message"></textarea>
+                <button type="submit" data-translate-key="Submit">Submit</button>
+            </form>
+        </section>
 
-  <!-- MAIN CONTENT -->
-  <div class="content">
-    <h1 id="headline">Business Setup Solutions</h1>
-    <p class="subtitle" id="subtext">Business setup consultants in Dubai, UAE</p>
-    <button class="btn" id="contactBtn">Contact Us</button>
-  </div>
+        <section id="uae-business-setup">
+            <h3 data-translate-key="UAE Business Setup Process">UAE Business Setup Process</h3>
+            <p data-translate-key="Learn about the essential steps to establish your company in the UAE">Learn about the essential steps to establish your company in the UAE</p>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2025 <a href="https://moreydigital.ie" target="_blank" rel="noopener noreferrer">Morey Digital</a>. All Rights Reserved.</p>
-  </footer>
+            <div class="steps">
+                <div class="step">
+                    <h4 data-translate-key="Choose the correct activity">Choose the correct activity</h4>
+                    <p data-translate-key="The choice of license will depend on your business specific needs and the business activities you will be conducting.">The choice of license will depend on your business specific needs and the business activities you will be conducting.</p>
+                </div>
+                <div class="step">
+                    <h4 data-translate-key="Decide on the place of registration">Decide on the place of registration</h4>
+                    <p data-translate-key="There are 3 main jurisdictions in the UAE: Mainland, Free zone, Offshore.">There are 3 main jurisdictions in the UAE: Mainland, Free zone, Offshore.</p>
+                </div>
+                <div class="step">
+                    <h4 data-translate-key="Get a list of requirements and approvals">Get a list of requirements and approvals</h4>
+                    <p data-translate-key="Depending on your business, obtaining special licenses and permissions from the relevant Emirates authorities may be required.">Depending on your business, obtaining special licenses and permissions from the relevant Emirates authorities may be required.</p>
+                </div>
+                <div class="step">
+                    <h4 data-translate-key="Register your company and get the visa">Register your company and get the visa</h4>
+                    <p data-translate-key="Apply for company registration, pay the fees, and obtain the visa and work permits for you and your employees.">Apply for company registration, pay the fees, and obtain the visa and work permits for you and your employees.</p>
+                </div>
+                <div class="step">
+                    <h4 data-translate-key="Open a bank account">Open a bank account</h4>
+                    <p data-translate-key="Once you have all the incorporation documents in hand, apply for personal or corporate bank accounts and get started!">Once you have all the incorporation documents in hand, apply for personal or corporate bank accounts and get started!</p>
+                </div>
+            </div>
+        </section>
 
-  <!-- SCRIPT -->
-  <script>
-    function toggleMobileMenu(btn) {
-      btn.classList.toggle("open");
-      document.getElementById("mobileNav").classList.toggle("show");
-    }
+        <section id="free-zone-information">
+            <h3 data-translate-key="Start your business in the UAE free zones">Start your business in the UAE free zones</h3>
+            <p data-translate-key="There are over 40 different freezones in the UAE to match all business needs">There are over 40 different freezones in the UAE to match all business needs</p>
 
-    const translations = {
-      ru: {
-        headline: "Решения для открытия бизнеса",
-        subtext: "Консультанты по открытию бизнеса в Дубае, ОАЭ",
-        contact: "Связаться с нами"
-      },
-      fr: {
-        headline: "Solutions de création d'entreprise",
-        subtext: "Consultants en création d'entreprise à Dubaï, Émirats arabes unis",
-        contact: "Contactez-nous"
-      },
-      de: {
-        headline: "Lösungen zur Unternehmensgründung",
-        subtext: "Berater für Unternehmensgründung in Dubai, VAE",
-        contact: "Kontaktieren Sie uns"
-      },
-      en: {
-        headline: "Business Setup Solutions",
-        subtext: "Business setup consultants in Dubai, UAE",
-        contact: "Contact Us"
-      }
-    };
+            <div class="free-zones">
+                <div class="free-zone">
+                    <h4 data-translate-key="DMCC">DMCC</h4>
+                    <p data-translate-key="Dubai Multi Commodities Center">Dubai Multi Commodities Center</p>
+                    <a data-translate-key="Learn more" href="#">Learn more</a>
+                </div>
+                <div class="free-zone">
+                    <h4 data-translate-key="Dubai South Free Zone">Dubai South Free Zone</h4>
+                    <p data-translate-key="(ex. DWC)">(ex. DWC)</p>
+                    <a data-translate-key="Learn more" href="#">Learn more</a>
+                </div>
+                 <div class="free-zone">
+                    <h4 data-translate-key="DTEC">DTEC</h4>
+                    <p data-translate-key="Dubai Technology Entrepreneur Center">Dubai Technology Entrepreneur Center</p>
+                    <a data-translate-key="Learn more" href="#">Learn more</a>
+                </div>
+                 <div class="free-zone">
+                    <h4 data-translate-key="DAFZA">DAFZA</h4>
+                    <p data-translate-key="Dubai Airport Free Zone">Dubai Airport Free Zone</p>
+                    <a data-translate-key="Learn more" href="#">Learn more</a>
+                </div>
+                 <div class="free-zone">
+                    <h4 data-translate-key="IFZA">IFZA</h4>
+                    <p data-translate-key="International Free Zone Authority">International Free Zone Authority</p>
+                    <a data-translate-key="Learn more" href="#">Learn more</a>
+                </div>
+                 <div class="free-zone">
+                    <h4 data-translate-key="DSO">DSO</h4>
+                    <p data-translate-key="Dubai Silicon Oasis">Dubai Silicon Oasis</p>
+                    <a data-translate-key="Learn more" href="#">Learn more</a>
+                </div>
+            </div>
+        </section>
 
-    function switchLanguage(lang) {
-      const t = translations[lang];
-      document.getElementById("headline").textContent = t.headline;
-      document.getElementById("subtext").textContent = t.subtext;
-      document.getElementById("contactBtn").textContent = t.contact;
-      document.getElementById("languageSwitcher").value = lang;
-      document.getElementById("mobileLanguageSwitcher").value = lang;
-    }
-  </script>
+        <section id="uae-taxes">
+            <h3 data-translate-key="UAE TAXes">UAE TAXes</h3>
+            <p data-translate-key="Find out essential details on UAE tax regulations">Find out essential details on UAE tax regulations</p>
+
+            <div class="taxes">
+                <div class="tax">
+                    <h4 data-translate-key="Corporate tax 9%">Corporate tax 9%</h4>
+                    <p data-translate-key="Corporate tax in the UAE is just 9%. All UAE companies need to register with the FTA and submit annual tax returns.">Corporate tax in the UAE is just 9%. All UAE companies need to register with the FTA and submit annual tax returns.</p>
+                    <a data-translate-key="Learn more" href="#">Learn more</a>
+                </div>
+                <div class="tax">
+                    <h4 data-translate-key="VAT">VAT</h4>
+                    <p data-translate-key="VAT in the UAE is one of the world's lowest - only 5%. Businesses with an annual revenue exceeding 375,000 AED are required to register for VAT with the FTA.">VAT in the UAE is one of the world's lowest - only 5%. Businesses with an annual revenue exceeding 375,000 AED are required to register for VAT with the FTA.</p>
+                    <a data-translate-key="Learn more" href="#">Learn more</a>
+                </div>
+                 <div class="tax">
+                    <h4 data-translate-key="Zero personal TAX // Exemption certificate">Zero personal TAX // Exemption certificate</h4>
+                    <p data-translate-key="There is no personal income tax in the UAE, maintaining the country's appeal as a tax-friendly environment for individuals.">There is no personal income tax in the UAE, maintaining the country's appeal as a tax-friendly environment for individuals.</p>
+                    <a data-translate-key="Learn more" href="#">Learn more</a>
+                 </div>
+            </div>
+        </section>
+
+         <section id="dubai-trade-license">
+            <h3 data-translate-key="Dubai trade license">Dubai trade license</h3>
+            <p data-translate-key="Compare the available business licenses and choose the one matching your needs">Compare the available business licenses and choose the one matching your needs</p>
+
+            <div class="licenses">
+                <div class="license">
+                    <h4 data-translate-key="E-commerce license">E-commerce license</h4>
+                    <p data-translate-key="Transform your digital business ideas into reality with an E-Commerce License in the UAE">Transform your digital business ideas into reality with an E-Commerce License in the UAE</p>
+                    <a data-translate-key="Learn more" href="#">Learn more</a>
+                </div>
+                <div class="license">
+                    <h4 data-translate-key="Beauty salon license">Beauty salon license</h4>
+                    <p data-translate-key="Embark on a beauty entrepreneur journey in the UAE by obtaining a Beauty Salon License">Embark on a beauty entrepreneur journey in the UAE by obtaining a Beauty Salon License</p>
+                    <a data-translate-key="Learn more" href="#">Learn more</a>
+                </div>
+                 <div class="license">
+                    <h4 data-translate-key="Car lease license">Car lease license</h4>
+                    <p data-translate-key="Enter the automotive market with a Car Lease License in the UAE, providing flexible and reliable vehicle leasing options.">Enter the automotive market with a Car Lease License in the UAE, providing flexible and reliable vehicle leasing options.</p>
+                    <a data-translate-key="Learn more" href="#">Learn more</a>
+                </div>
+            </div>
+        </section>
+
+         <section id="uae-residency-visa">
+            <h3 data-translate-key="Become the UAE resident">Become the UAE resident</h3>
+            <p data-translate-key="Apply for the UAE residence visa and enjoy all the benefits">Apply for the UAE residence visa and enjoy all the benefits</p>
+
+            <div class="visas">
+                <div class="visa">
+                    <h4 data-translate-key="Golden visa">Golden visa</h4>
+                    <p data-translate-key="Prestigious 10-year visa">Prestigious 10-year visa</p>
+                    <a data-translate-key="Learn more" href="#">Learn more</a>
+                </div>
+                <div class="visa">
+                    <h4 data-translate-key="Real estate investor visa">Real estate investor visa</h4>
+                    <p data-translate-key="Invest in UAE real estate from AED 750,000">Invest in UAE real estate from AED 750,000</p>
+                    <a data-translate-key="Learn more" href="#">Learn more</a>
+                </div>
+                 <div class="visa">
+                    <h4 data-translate-key="Partner visa">Partner visa</h4>
+                    <p data-translate-key="Elevate your business in the UAE">Elevate your business in the UAE</p>
+                    <a data-translate-key="Learn more" href="#">Learn more</a>
+                </div>
+            </div>
+        </section>
+
+         <section id="open-bank-account">
+            <h3 data-translate-key="Open bank account in the UAE">Open bank account in the UAE</h3>
+            <p data-translate-key="Learn about bank account types, terms, and requirements">Learn about bank account types, terms, and requirements</p>
+
+            <div class="bank-accounts">
+                <div class="bank-account">
+                    <h4 data-translate-key="Corporate bank account">Corporate bank account</h4>
+                    <p data-translate-key="Establish a strong financial foundation for your business and grow your business domestically and internationally">Establish a strong financial foundation for your business and grow your business domestically and internationally</p>
+                    <a data-translate-key="Apply now" href="#">Apply now</a>
+                </div>
+                <div class="bank-account">
+                    <h4 data-translate-key="Resident bank account">Resident bank account</h4>
+                    <p data-translate-key="Manage your finances in a stable economic environment, making both local and international transactions with ease">Manage your finances in a stable economic environment, making both local and international transactions with ease</p>
+                    <a data-translate-key="Apply now" href="#">Apply now</a>
+                </div>
+                 <div class="bank-account">
+                    <h4 data-translate-key="Non resident account">Non resident account</h4>
+                    <p data-translate-key="Access banking services, conduct financial transactions, and secure your savings without the requirement of residency">Access banking services, conduct financial transactions, and secure your savings without the requirement of residency</p>
+                    <a data-translate-key="Apply now" href="#">Apply now</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Business Setup Solutions Dubai | Powered by <a href="https://moreydigital.ie">Morey Digital</a></p>
+    </footer>
+
+    <!-- Translation files -->
+    <script>
+        // Define global translation objects
+        window.translations = {
+            en: {},
+            fr: {},
+            ru: {}
+        };
+    </script>
+    <script src="en.js"></script>
+    <script src="fr.js"></script>
+    <script src="ru.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
