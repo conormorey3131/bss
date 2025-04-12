@@ -51,10 +51,10 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Change video source based on language
             if (language === 'ru') {
-                videoElement.querySelector('source').src = '2141654424972243138-r.mp4';
+                videoElement.querySelector('source').src = '2141654424972243138-R.mp4';
             } else {
                 // For English and French, use the English video
-                videoElement.querySelector('source').src = '532693626218070186-e.mp4';
+                videoElement.querySelector('source').src = '532693626218070186-E.mp4';
             }
             
             // Reload the video with the new source
