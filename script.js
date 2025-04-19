@@ -5,11 +5,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Check if translations are available
     if (!window.translations) {
         console.error('Translations object not found!');
-        window.translations = { en: {}, fr: {}, ru: {} };
+        window.translations = { en: {}, ru: {} };
     } else {
         console.log('Translations found:', Object.keys(window.translations));
         console.log('Russian translations keys:', Object.keys(window.translations.ru || {}).length);
-        console.log('French translations keys:', Object.keys(window.translations.fr || {}).length);
     }
     
     const languageButtons = document.querySelectorAll('.lang-btn');
@@ -51,10 +50,10 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Change video source based on language
             if (language === 'ru') {
-                videoElement.querySelector('source').src = '2141654424972243138-R.mp4';
+                videoElement.querySelector('source').src = '2141654424972243138-r.mp4';
             } else {
-                // For English and French, use the English video
-                videoElement.querySelector('source').src = '532693626218070186-E.mp4';
+                // For English, use the English video
+                videoElement.querySelector('source').src = '532693626218070186-e.mp4';
             }
             
             // Reload the video with the new source

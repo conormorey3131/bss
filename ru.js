@@ -77,5 +77,57 @@ window.translations.ru = {
     "Access banking services, conduct financial transactions, and secure your savings without the requirement of residency": "Получите доступ к банковским услугам, осуществляйте финансовые транзакции и обеспечьте сохранность своих сбережений без требования резидентства",
     "Learn more": "Узнать больше",
     "Apply now": "Подать заявку",
-    "Watch Our Presentation": "Посмотрите нашу презентацию"
+    "Watch Our Presentation": "Посмотрите нашу презентацию",
+    
+    // Company Registration Section
+    "Company Registration in Dubai": "Регистрация компании в Дубае - Начните свой бизнес сегодня",
+    "Streamlined Company Registration in Dubai": "Упрощенная регистрация компании в Дубае",
+    "Company Registration Description": "Когда дело касается регистрации компании в Дубае, Business Setup Solutions вам поможет. Наши эксперты проведут вас через весь процесс, обеспечивая соответствие вашего бизнеса всем местным нормам. Давайте начнем ваш бизнес сегодня!",
+    "Company Registration Guide Title": "Регистрация компании в Дубае – Ваше пошаговое руководство",
+    "Company Registration Guide Intro": "Начало бизнеса в Дубае – это увлекательное предприятие, но оно включает в себя ряд важных шагов и соблюдение местных правил. В Business Setup Solutions мы упрощаем процесс и проводим вас через каждый этап регистрации компании. Вот пошаговое руководство, которое поможет вам начать:",
+    
+    // New content placeholders
+    "Registration Step 1": "Choose the Right Business Activity and Legal Structure",
+    "Registration Step 2": "Select a Unique Company Name",
+    "Registration Step 3": "Prepare the Required Documents",
+    "Registration Step 4": "Determine Share Capital",
+    "Registration Step 5": "Obtain Initial Approval",
+    "Registration Step 6": "Legalize and Notarize Documents",
+    "Registration Step 7": "Rent a Physical Office Space",
+    "Registration Step 8": "Submit Documents and Fees",
+    "Registration Step 9": "Wait for Approval",
+    "Registration Step 10": "Receive the License",
+    "Registration Step 11": "Comply with Ongoing Requirements",
+    "Company Registration Conclusion": "Navigating the process of company registration in Dubai may seem complex, but with the guidance of Business Setup Solutions, it becomes a streamlined and efficient experience.",
+    
+    // Visa Processing Section
+    "Dubai Visa Processing Title": "Dubai Visa Processing and PRO Services - Effortless and Efficient",
+    "Dubai Visa Processing Subtitle": "Hassle-Free Visa Processing and PRO Services in Dubai",
+    "Dubai Visa Processing Description": "Navigating Dubai's visa and government procedures is complex, but our dedicated PRO services team at Business Setup Solutions handles it all, ensuring your business runs smoothly.",
+    "Visa Processing Guide Title": "Visa Processing and PRO Services in Dubai – Your Hassle-Free Solution",
+    "Visa Processing Guide Intro": "Navigating the complexities of visas and government procedures in Dubai can be challenging.",
+    
+    // Banking Solutions Section
+    "Banking Solutions Title": "Banking Solutions in Dubai - Secure Your Financial Future",
+    "Banking Solutions Subtitle": "Comprehensive Banking Solutions Tailored for Your Business",
+    "Banking Solutions Description": "Securing your financial future in Dubai is a breeze with our comprehensive banking solutions.",
+    
+    // Immigration Services Section
+    "Immigration Services Title": "Immigration Services in Dubai - Making Relocation Effortless",
+    "Immigration Services Description": "Whether you're an individual looking to relocate to Dubai or a business in need of immigration support for your employees, Business Setup Solutions offers comprehensive Immigration Services.",
+    
+    // Co-Working Space Section
+    "Coworking Title": "Co-Working Space/Private Office",
+    "Coworking Subtitle": "Elevate Your Work Experience – Co-Working and Private Offices",
+    "Coworking Description": "The perfect workspace is the cornerstone of productivity. Business Setup Solutions offers modern co-working spaces and private offices in prime Dubai locations.",
+    
+    // VAT and Audit Section
+    "VAT Audit Title": "VAT Registration and Annual Audit Services in Dubai",
+    "VAT Audit Subtitle": "Stay Compliant – VAT and Annual Audit Services in Dubai",
+    "VAT Audit Description": "Staying compliant with VAT regulations is imperative for your Dubai business.",
+    
+    // Corporate Advisory Section
+    "Corporate Advisory Title": "Strategic Corporate Advisory Services in Dubai",
+    "Corporate Advisory Subtitle": "Navigate Market Complexities with Our Corporate Advisory Services",
+    "Corporate Advisory Description": "Rely on Business Setup Solutions for strategic business decisions."
 };
