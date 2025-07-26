@@ -145,4 +145,16 @@ document.addEventListener('DOMContentLoaded', function() {
             observer.observe(section);
         });
     }
+
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburgerMenu.addEventListener('click', () => {
+        console.log('Hamburger menu clicked');
+        if (navLinks.style.display === 'flex') {
+            navLinks.style.display = 'none';
+        } else {
+            navLinks.style.display = 'flex';
+        }
+    });
 });
