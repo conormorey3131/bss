@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // For English, use the original text in the data-translate-key attribute
                 // or the English translation if available
                 const text = window.translations.en[key] || key;
-                element.textContent = text;
+                element.innerHTML = text;
                 
                 // For input placeholders
                 if (element.hasAttribute('placeholder')) {
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             } else if (window.translations[language] && window.translations[language][key]) {
                 // Use translation from the selected language
-                element.textContent = window.translations[language][key];
+                element.innerHTML = window.translations[language][key];
                 
                 // For input placeholders
                 if (element.hasAttribute('placeholder')) {
@@ -119,9 +119,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (savedLanguage) {
         console.log(`Found saved language preference: ${savedLanguage}`);
         updateLanguage(savedLanguage);
-    } else {
-        // Set English as default
-        updateLanguage('en');
     }
     
     // Add subtle animation effects to enhance UX
