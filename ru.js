@@ -11,6 +11,8 @@ window.translations.ru = {
     "Visa Services": "Визовые услуги",
     "Bank Account Opening": "Открытие банковского счета",
     "Residence Visa": "Вид на жительство",
+    "Accounting Support Solutions": "Бухгалтерское сопровождение",
+    "Relocation Services": "Услуги по переезду",
     "Learn More": "Узнать больше",
     "Fill out the form to contact an expert": "Заполните форму, чтобы связаться с экспертом",
     "Your Name": "Ваше имя",

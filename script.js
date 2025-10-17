@@ -119,6 +119,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (savedLanguage) {
         console.log(`Found saved language preference: ${savedLanguage}`);
         updateLanguage(savedLanguage);
+    } else {
+        updateLanguage(currentLanguage);
     }
     
     // Add subtle animation effects to enhance UX
@@ -145,13 +147,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const hamburgerMenu = document.querySelector('.hamburger-menu');
     const navLinks = document.querySelector('.nav-links');
+    const navLinksAnchors = navLinks.querySelectorAll('a');
 
     hamburgerMenu.addEventListener('click', () => {
-        console.log('Hamburger menu clicked');
-        if (navLinks.style.display === 'flex') {
-            navLinks.style.display = 'none';
-        } else {
-            navLinks.style.display = 'flex';
+        navLinks.classList.toggle('active');
+        document.body.classList.toggle('no-scroll');
+    });
+
+    navLinksAnchors.forEach(link => {
+        link.addEventListener('click', () => {
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                document.body.classList.remove('no-scroll');
+            }
+        });
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!navLinks.contains(e.target) && !hamburgerMenu.contains(e.target)) {
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                document.body.classList.remove('no-scroll');
+            }
         }
     });
 });
