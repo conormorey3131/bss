@@ -58,6 +58,7 @@ header {
     display: flex;
     align-items: center;
     gap: 2rem;
+    margin-left: auto;
   }
   
   .hero-header {
@@ -384,6 +385,22 @@ header {
   #contact button:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .email-contact {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .email-contact p {
+    font-size: 1.1rem;
+    color: #666;
+  }
+
+  .email-contact a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
   }
 
   .contact-numbers {
@@ -1310,10 +1327,15 @@ footer a:hover::after {
 
 .service-graphic {
     width: 100%;
+    max-width: 400px;
+    max-height: 400px;
     height: auto;
     border-radius: var(--border-radius);
     margin-bottom: 2rem;
     box-shadow: var(--box-shadow);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .service-content h2 {
