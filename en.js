@@ -1,6 +1,6 @@
 // English translations
 window.translations.en = {
-    "Business Setup in Dubai, Company Formation in the UAE": "Business Setup in Dubai for Irish Entrepreneurs, Company Formation in UAE",
+    "Business setup consultants in Dubai, UAE": "Business setup consultants in Dubai, UAE",
     "Starting from 5,750 AED | Guaranteed bank account": "Starting from 5,500 AED | Registration 1 day | Guaranteed bank account for Irish Citizens",
     "Get a Free Consultation": "Get a Free Consultation",
     "Our Services": "Our Services",

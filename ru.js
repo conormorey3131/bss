@@ -1,6 +1,6 @@
 // Russian translations
 window.translations.ru = {
-    "Business Setup in Dubai, Company Formation in the UAE": "Создание бизнеса в Дубае для ирландских предпринимателей, создание компании в ОАЭ",
+    "Business setup consultants in Dubai, UAE": "Консультанты по настройке бизнеса в Дубае, ОАЭ",
     "Starting from 5,750 AED | Guaranteed bank account": "От 5 500 дирхамов ОАЭ | Регистрация 1 день | Гарантированный банковский счет для граждан Ирландии",
     "Get a Free Consultation": "Получите бесплатную консультацию",
     "Our Services": "Наши услуги",
@@ -507,5 +507,6 @@ window.translations.ru = {
     "residence_visa_process_heading": "Наш процесс",
     "visa_services_benefits_heading": "Ключевые преимущества",
     "visa_services_process_heading": "Наш процесс",
-    "For any inquiries or questions, please email us at": "По любым вопросам или вопросам, пожалуйста, напишите нам по адресу info@bss-fzco.com"
+    "For any inquiries or questions, please email us at": "По любым вопросам или вопросам, пожалуйста, напишите нам по адресу info@bss-fzco.com",
+    "Germany Branch": "Филиал в Германии: +4915737695906"
 };
