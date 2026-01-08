@@ -171,4 +171,16 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+
+    // Automatically update copyright year
+    function updateCopyrightYear() {
+        const currentYear = new Date().getFullYear();
+        const footerParagraph = document.querySelector('footer p');
+        if (footerParagraph) {
+            footerParagraph.innerHTML = footerParagraph.innerHTML.replace(/© \d{4}/, `© ${currentYear}`);
+        }
+    }
+    
+    // Update copyright year on page load
+    updateCopyrightYear();
 });
